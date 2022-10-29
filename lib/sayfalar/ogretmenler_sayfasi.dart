@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:list_app/repository/ogretmen_repo.dart';
 
+import '../models/ogretmen_model.dart';
+
 class OgretmenSayfasi extends ConsumerWidget {
   const OgretmenSayfasi({
     super.key,
