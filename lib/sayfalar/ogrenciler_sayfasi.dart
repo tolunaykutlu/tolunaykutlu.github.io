@@ -49,6 +49,7 @@ class OgrenciView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    var ogrenci1 = Ogrenci("ali", "veli", 12, "erkek");
     bool seviyorMuyum = ref.watch(ogrenciProvider).seviyorMuyum(ogrenci);
 
     return ListTile(
@@ -59,6 +60,7 @@ class OgrenciView extends ConsumerWidget {
       trailing: IconButton(
           onPressed: () {
             ref.read(ogrenciProvider).sev(ogrenci, !seviyorMuyum);
+            ref.read(ogrenciProvider).addOgrenci(ogrenci1);
           },
           icon: Icon(
             seviyorMuyum ? Icons.favorite : Icons.favorite_outline_outlined,

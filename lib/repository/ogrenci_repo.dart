@@ -7,6 +7,10 @@ class OgrenciRepo extends ChangeNotifier {
     Ogrenci("ayşe", "mazmaz", 19, "kadın")
   ];
 
+  void addOgrenci(Ogrenci ogrenci) {
+    ogrenciler.add(ogrenci);
+  }
+
   void sev(Ogrenci ogrenci, bool seviyorMuyum) {
     if (seviyorMuyum) {
       sevdiklerim.add(ogrenci);

@@ -19,6 +19,7 @@ class _MesajSayfasiState extends ConsumerState<MesajSayfasi> {
     final a = ref.read(yeniMesajSayisiProvider.notifier).sifirla();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     final mesajlarRepository = ref.watch(mesajlarProvider);
