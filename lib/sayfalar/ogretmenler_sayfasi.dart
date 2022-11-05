@@ -19,9 +19,20 @@ class OgretmenSayfasi extends ConsumerWidget {
         PhysicalModel(
           elevation: 10,
           color: Colors.white,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
-            child: Text("${ogretmenRepo.ogretmen.length} öğretmen"),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
+                child: Text("${ogretmenRepo.ogretmen.length} öğretmen"),
+              ),
+              IconButton(
+                  onPressed: () {
+                    ref.read(ogretmenlerProvider).indir();
+                  },
+                  icon: const Icon(Icons.add))
+            ],
           ),
         ),
         Expanded(
@@ -51,7 +62,9 @@ class OgretmenView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: const Icon(Icons.woman_rounded),
+      leading: ogretmen.cinsiyet == "kadın"
+          ? const Icon(Icons.woman_rounded)
+          : const Icon(Icons.man_sharp),
       title: Text(ogretmen.ad),
     );
   }

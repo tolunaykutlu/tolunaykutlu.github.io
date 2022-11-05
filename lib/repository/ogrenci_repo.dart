@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../models/ogrenci_model.dart';
 
 class OgrenciRepo extends ChangeNotifier {
   List ogrenciler = [
@@ -30,12 +31,3 @@ final Set<Ogrenci> sevdiklerim = {};
 final ogrenciProvider = ChangeNotifierProvider(((ref) {
   return OgrenciRepo();
 }));
-
-class Ogrenci {
-  String ad;
-  String soyad;
-  int yas;
-  String cinsiyet;
-
-  Ogrenci(this.ad, this.soyad, this.yas, this.cinsiyet);
-}

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../models/ogrenci_model.dart';
 import '../repository/ogrenci_repo.dart';
 
 class OgrencilerSayfasi extends ConsumerWidget {
